@@ -1,0 +1,304 @@
+.page {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensure the hero takes at least full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0f1e; /* Dark background matching the banner edges */
+}
+
+.bannerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); /* Darken implementation for readability */
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.heroTitle {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #005bb5;
+}
+
+.section {
+  padding: 5rem 1rem;
+}
+
+.altSection {
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.textBlock {
+  flex: 1;
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.input {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contactForm {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.overviewBlock {
+  background: white;
+  padding: 4rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* More diffuse, premium shadow */
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.overviewHeader {
+  margin-bottom: 2.5rem;
+}
+
+.overviewTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.overviewDivider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #00c6ff);
+  border-radius: 2px;
+}
+
+.overviewBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.leadText {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.6;
+}
+
+.subText {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.workTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.overviewList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Two columns on wide screens */
+  gap: 1.5rem;
+}
+
+.overviewList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overviewList li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+.iconWrapper {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+.overviewList li span:last-child {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.focusBox {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f0f7ff;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.focusBox p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.faded {
+  opacity: 0.7;
+}
+
+.ctaBox {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .overviewBlock {
+    padding: 2rem;
+  }
+  
+  .overviewTitle {
+    font-size: 2rem;
+  }
+  
+  .overviewList {
+    grid-template-columns: 1fr;
+  }
+  
+  .overviewList li {
+    min-width: auto;
+  }
+}
